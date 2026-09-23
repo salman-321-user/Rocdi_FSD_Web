@@ -1,0 +1,62 @@
+{
+    "sidebar": {
+        "brand": "Diamdent",
+        "brandSub": "Alineurs",
+        "dashboard": "Dashboard",
+        "home": "Home",
+        "realsmileAi": "RealSmile AI",
+        "realsmileAiCases": "RealSmile AI Cases",
+        "patients": "Patients",
+        "casesHub": "Cases Hub",
+        "addCase": "Add A Case",
+        "addRetainer": "Add A Retainer",
+        "allCases": "All Cases",
+        "incompleteSubmission": "Incomplete Submission"
+    },
+    "navbar": {
+        "searchPlaceholder": "Search for a page",
+        "language": "English"
+    },
+    "home": {
+        "gettingStarted": {
+            "title": "Getting started",
+            "subtitle": "Set up your RealSmile workspace",
+            "dismiss": "Dismiss",
+            "availabilityTitle": "My availability",
+            "availabilityDescription": "Set your working days and hours, closure days, and consultation type (online, in-person, or both).",
+            "aiTitle": "RealSmile AI",
+            "aiDescription": "Upload a photo of your patient and let AI generate an orthodontic treatment simulation in seconds.",
+            "appTitle": "Mobile App",
+            "appDescription": "Track your cases, view your stats, and manage your activity directly from your phone."
+        },
+        "hero": {
+            "headline": "Clear aligners for beautifully straight teeth"
+        },
+        "featureBanner": {
+            "title": "New feature: RealSmile AI",
+            "subtitle": "Try it now and improve your patients' experience!",
+            "cta": "Discover"
+        },
+        "stats": {
+            "totalCases": "Total Cases",
+            "smilesetDesign": "SmileSet Design",
+            "approvalRequired": "Approval Required"
+        },
+        "welcome": {
+            "greeting": "Hello,",
+            "subtitle": "This is what is happening in your practice today. Check the statistics at a glance.",
+            "cta": "Add a case"
+        },
+        "recentCases": {
+            "title": "Recent Cases",
+            "filter": "SmileSet In Progress",
+            "empty": "No cases to show yet",
+            "viewAll": "View all"
+        },
+        "chart": {
+            "title": "Cases by Age Group and Gender",
+            "total": "Total cases: {{count}}",
+            "casesUnit": "{{count}} cases"
+        }
+    }
+}

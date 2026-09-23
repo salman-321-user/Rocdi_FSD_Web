@@ -1,0 +1,62 @@
+{
+  "sidebar": {
+    "brand": "Diamdent",
+    "brandSub": "Alineurs",
+    "dashboard": "Tableau de bord",
+    "home": "Accueil",
+    "realsmileAi": "RealSmile IA",
+    "realsmileAiCases": "Dossiers RealSmile IA",
+    "patients": "Patients",
+    "casesHub": "Espace dossiers",
+    "addCase": "Ajouter un dossier",
+    "addRetainer": "Ajouter une contention",
+    "allCases": "Tous les dossiers",
+    "incompleteSubmission": "Soumissions incomplètes"
+  },
+  "navbar": {
+    "searchPlaceholder": "Rechercher une page",
+    "language": "Français"
+  },
+  "home": {
+    "gettingStarted": {
+      "title": "Premiers pas",
+      "subtitle": "Configurez votre espace RealSmile",
+      "dismiss": "Ignorer",
+      "availabilityTitle": "Mes disponibilités",
+      "availabilityDescription": "Définissez vos jours et horaires de travail, vos jours de fermeture et le type de consultation (en ligne, au cabinet, ou les deux).",
+      "aiTitle": "RealSmile IA",
+      "aiDescription": "Téléversez une photo de votre patient et laissez l'IA générer une simulation de traitement orthodontique en quelques secondes.",
+      "appTitle": "Application mobile",
+      "appDescription": "Suivez vos dossiers, consultez vos statistiques et gérez votre activité directement depuis votre téléphone."
+    },
+    "hero": {
+      "headline": "Des gouttières transparentes pour des dents bien alignées"
+    },
+    "featureBanner": {
+      "title": "Nouvelle fonctionnalité : RealSmile IA",
+      "subtitle": "Essayez-la dès maintenant et améliorez l'expérience de vos patients !",
+      "cta": "Découvrir"
+    },
+    "stats": {
+      "totalCases": "Total des dossiers",
+      "smilesetDesign": "Conception SmileSet",
+      "approvalRequired": "Approbation requise"
+    },
+    "welcome": {
+      "greeting": "Bonjour,",
+      "subtitle": "Voici ce qui se passe dans votre cabinet aujourd'hui. Consultez les statistiques en un coup d'œil.",
+      "cta": "Ajouter un dossier"
+    },
+    "recentCases": {
+      "title": "Dossiers récents",
+      "filter": "SmileSet en cours",
+      "empty": "Aucun dossier à afficher pour le moment",
+      "viewAll": "Voir tout"
+    },
+    "chart": {
+      "title": "Dossiers par tranche d'âge et sexe",
+      "total": "Total des dossiers : {{count}}",
+      "casesUnit": "{{count}} dossiers"
+    }
+  }
+}
