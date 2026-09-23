@@ -62,20 +62,22 @@ export default function Home() {
     ];
 
     return (
-        <div className="mx-auto max-w-6xl space-y-6">
+        <div className="mx-auto max-w-6xl space-y-4 sm:space-y-6">
             {/* Getting started */}
             {showOnboarding && (
-                <section className="rounded-2xl border border-neutral-200 bg-white p-5">
-                    <div className="mb-4 flex items-center justify-between">
+                <section className="rounded-2xl border border-neutral-200 bg-white p-4 sm:p-5">
+                    <div className="mb-4 flex items-start justify-between gap-2">
                         <div>
-                            <h2 className="text-base font-semibold text-neutral-900">
+                            <h2 className="text-sm font-semibold text-neutral-900 sm:text-base">
                                 {t("home.gettingStarted.title")}
                             </h2>
-                            <p className="text-sm text-neutral-500">
+                            <p className="text-xs text-neutral-500 sm:text-sm">
                                 {t("home.gettingStarted.subtitle")}
                             </p>
                         </div>
-                        <span className="text-sm text-neutral-400">0 / 3</span>
+                        <span className="shrink-0 text-xs text-neutral-400 sm:text-sm">
+                            0 / 3
+                        </span>
                     </div>
 
                     <div className="mb-2 h-1.5 w-full overflow-hidden rounded-full bg-neutral-100">
@@ -86,25 +88,30 @@ export default function Home() {
                         {onboardingSteps.map(({ icon: Icon, title, description }) => (
                             <button
                                 key={title}
-                                className="flex w-full items-center gap-4 py-3 text-left hover:bg-neutral-50"
+                                className="flex w-full items-center gap-3 py-3 text-left hover:bg-neutral-50 sm:gap-4"
                             >
-                                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-50 text-amber-600">
+                                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-amber-50 text-amber-600 sm:h-10 sm:w-10">
                                     <Icon size={18} />
                                 </span>
                                 <span className="flex-1">
                                     <p className="text-sm font-medium text-neutral-900">
                                         {title}
                                     </p>
-                                    <p className="text-sm text-neutral-500">{description}</p>
+                                    <p className="text-xs text-neutral-500 sm:text-sm">
+                                        {description}
+                                    </p>
                                 </span>
-                                <ArrowRight size={16} className="text-neutral-400" />
+                                <ArrowRight
+                                    size={16}
+                                    className="shrink-0 text-neutral-400"
+                                />
                             </button>
                         ))}
                     </div>
 
                     <button
                         onClick={() => setShowOnboarding(false)}
-                        className="mt-2 text-sm text-neutral-400 hover:text-neutral-600"
+                        className="mt-2 text-xs text-neutral-400 hover:text-neutral-600 sm:text-sm"
                     >
                         {t("home.gettingStarted.dismiss")}
                     </button>
@@ -116,10 +123,10 @@ export default function Home() {
                 <img
                     src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1600&auto=format&fit=crop"
                     alt=""
-                    className="h-80 w-full object-cover"
+                    className="h-56 w-full object-cover sm:h-72 md:h-80"
                 />
                 <div className="absolute inset-0 flex items-center bg-gradient-to-r from-white/90 via-white/40 to-transparent">
-                    <h1 className="max-w-md px-10 text-4xl font-semibold leading-tight text-neutral-900">
+                    <h1 className="max-w-md px-6 text-2xl font-semibold leading-tight text-neutral-900 sm:px-10 sm:text-3xl md:text-4xl">
                         {t("home.hero.headline")}
                     </h1>
                 </div>
@@ -130,34 +137,38 @@ export default function Home() {
             </section>
 
             {/* Feature banner */}
-            <section className="flex items-center justify-between rounded-2xl bg-gradient-to-r from-amber-400 to-amber-500 px-6 py-4">
+            <section className="flex flex-col gap-3 rounded-2xl bg-gradient-to-r from-amber-400 to-amber-500 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
                 <div className="flex items-center gap-3 text-white">
-                    <Sparkles size={20} />
+                    <Sparkles size={20} className="shrink-0" />
                     <div>
-                        <p className="font-semibold">{t("home.featureBanner.title")}</p>
-                        <p className="text-sm text-amber-50">
+                        <p className="text-sm font-semibold sm:text-base">
+                            {t("home.featureBanner.title")}
+                        </p>
+                        <p className="text-xs text-amber-50 sm:text-sm">
                             {t("home.featureBanner.subtitle")}
                         </p>
                     </div>
                 </div>
-                <button className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-amber-600 hover:bg-amber-50">
+                <button className="w-full rounded-lg bg-white px-4 py-2 text-sm font-medium text-amber-600 hover:bg-amber-50 sm:w-auto">
                     {t("home.featureBanner.cta")}
                 </button>
             </section>
 
             {/* Stats row */}
-            <section className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <section className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
                 {stats.map(({ icon: Icon, label, value }) => (
                     <div
                         key={label}
-                        className="flex items-center gap-4 rounded-2xl border border-neutral-200 bg-white p-5"
+                        className="flex items-center gap-4 rounded-2xl border border-neutral-200 bg-white p-4 sm:p-5"
                     >
-                        <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-800 text-white">
+                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-800 text-white sm:h-12 sm:w-12">
                             <Icon size={20} />
                         </span>
                         <div>
-                            <p className="text-sm text-neutral-500">{label}</p>
-                            <p className="text-2xl font-semibold text-neutral-900">
+                            <p className="text-xs text-neutral-500 sm:text-sm">
+                                {label}
+                            </p>
+                            <p className="text-xl font-semibold text-neutral-900 sm:text-2xl">
                                 {value}
                             </p>
                         </div>
@@ -166,16 +177,16 @@ export default function Home() {
             </section>
 
             {/* Welcome banner */}
-            <section className="flex items-center justify-between rounded-2xl border border-neutral-200 bg-white p-8">
+            <section className="flex flex-col gap-4 rounded-2xl border border-neutral-200 bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-8">
                 <div>
-                    <h2 className="text-2xl font-semibold text-neutral-900">
+                    <h2 className="text-xl font-semibold text-neutral-900 sm:text-2xl">
                         {t("home.welcome.greeting")} <br />
                         {DOCTOR_NAME} 👋
                     </h2>
                     <p className="mt-2 max-w-md text-sm text-neutral-500">
                         {t("home.welcome.subtitle")}
                     </p>
-                    <button className="mt-4 rounded-lg bg-amber-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-amber-600">
+                    <button className="mt-4 w-full rounded-lg bg-amber-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-amber-600 sm:w-auto">
                         + {t("home.welcome.cta")}
                     </button>
                 </div>
@@ -185,17 +196,17 @@ export default function Home() {
             </section>
 
             {/* Recent cases */}
-            <section className="rounded-2xl border border-neutral-200 bg-white p-5">
-                <div className="mb-4 flex items-center justify-between">
-                    <h2 className="text-base font-semibold text-neutral-900">
+            <section className="rounded-2xl border border-neutral-200 bg-white p-4 sm:p-5">
+                <div className="mb-4 flex items-center justify-between gap-2">
+                    <h2 className="text-sm font-semibold text-neutral-900 sm:text-base">
                         {t("home.recentCases.title")}
                     </h2>
-                    <button className="flex items-center gap-1 rounded-lg border border-neutral-200 px-3 py-1.5 text-sm text-neutral-600 hover:bg-neutral-50">
+                    <button className="flex shrink-0 items-center gap-1 rounded-lg border border-neutral-200 px-3 py-1.5 text-xs text-neutral-600 hover:bg-neutral-50 sm:text-sm">
                         {t("home.recentCases.filter")}
                         <ChevronDown size={14} />
                     </button>
                 </div>
-                <div className="flex h-40 items-center justify-center text-sm text-neutral-400">
+                <div className="flex h-32 items-center justify-center text-sm text-neutral-400 sm:h-40">
                     {t("home.recentCases.empty")}
                 </div>
                 <div className="mt-2 text-center">
@@ -206,27 +217,35 @@ export default function Home() {
             </section>
 
             {/* Chart */}
-            <section className="rounded-2xl border border-neutral-200 bg-white p-5">
-                <p className="text-sm text-neutral-500">{t("home.chart.title")}</p>
-                <p className="mb-4 text-2xl font-semibold text-neutral-900">
+            <section className="rounded-2xl border border-neutral-200 bg-white p-4 sm:p-5">
+                <p className="text-xs text-neutral-500 sm:text-sm">
+                    {t("home.chart.title")}
+                </p>
+                <p className="mb-4 text-xl font-semibold text-neutral-900 sm:text-2xl">
                     {t("home.chart.total", { count: 1 })}
                 </p>
-                <div className="h-64">
+                <div className="h-56 sm:h-64">
                     <ResponsiveContainer width="100%" height="100%">
                         <BarChart data={caseData}>
                             <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                            <XAxis dataKey="group" tickLine={false} axisLine={false} />
+                            <XAxis
+                                dataKey="group"
+                                tickLine={false}
+                                axisLine={false}
+                                tick={{ fontSize: 12 }}
+                            />
                             <YAxis
                                 allowDecimals={false}
                                 tickLine={false}
                                 axisLine={false}
+                                tick={{ fontSize: 12 }}
                                 tickFormatter={(v) => t("home.chart.casesUnit", { count: v })}
                             />
                             <Bar
                                 dataKey="cases"
                                 fill="#2563eb"
                                 radius={[4, 4, 0, 0]}
-                                barSize={48}
+                                barSize={32}
                             />
                         </BarChart>
                     </ResponsiveContainer>

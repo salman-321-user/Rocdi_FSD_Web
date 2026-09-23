@@ -9,13 +9,15 @@ import {
     Repeat,
     FolderOpen,
     FileWarning,
+    X,
 } from "lucide-react";
 
-function NavItem({ to, label, icon: Icon }) {
+function NavItem({ to, label, icon: Icon, onClick }) {
     return (
         <NavLink
             to={to}
             end={to === "/"}
+            onClick={onClick}
             className={({ isActive }) =>
                 [
                     "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors",
@@ -31,7 +33,7 @@ function NavItem({ to, label, icon: Icon }) {
     );
 }
 
-export default function Sidebar() {
+export default function Sidebar({ onClose }) {
     const { t } = useTranslation();
 
     const dashboardLinks = [
@@ -57,20 +59,31 @@ export default function Sidebar() {
     ];
 
     return (
-        <aside className="flex h-screen w-64 shrink-0 flex-col bg-[#161513] px-4 py-6">
-            {/* Logo */}
-            <div className="mb-8 flex items-center gap-3 px-2">
-                <div className="flex h-11 w-11 items-center justify-center rounded-full border border-amber-500/40">
-                    <span className="h-3 w-3 rounded-full bg-amber-500" />
+        <aside className="flex h-full w-full flex-col bg-[#161513] px-4 py-6 md:w-64">
+            {/* Logo + close button (mobile only) */}
+            <div className="mb-8 flex items-center justify-between gap-3 px-2">
+                <div className="flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full border border-amber-500/40">
+                        <span className="h-3 w-3 rounded-full bg-amber-500" />
+                    </div>
+                    <div className="leading-tight">
+                        <p className="text-lg font-semibold tracking-wide text-white">
+                            {t("sidebar.brand")}
+                        </p>
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                            {t("sidebar.brandSub")}
+                        </p>
+                    </div>
                 </div>
-                <div className="leading-tight">
-                    <p className="text-lg font-semibold tracking-wide text-white">
-                        {t("sidebar.brand")}
-                    </p>
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
-                        {t("sidebar.brandSub")}
-                    </p>
-                </div>
+
+                {/* Close button – mobile only */}
+                <button
+                    onClick={onClose}
+                    className="text-neutral-400 hover:text-white md:hidden"
+                    aria-label="Close sidebar"
+                >
+                    <X size={20} />
+                </button>
             </div>
 
             <nav className="flex-1 space-y-6 overflow-y-auto">
@@ -80,7 +93,7 @@ export default function Sidebar() {
                     </p>
                     <div className="space-y-1">
                         {dashboardLinks.map((link) => (
-                            <NavItem key={link.to} {...link} />
+                            <NavItem key={link.to} {...link} onClick={onClose} />
                         ))}
                     </div>
                 </div>
@@ -91,7 +104,7 @@ export default function Sidebar() {
                     </p>
                     <div className="space-y-1">
                         {casesHubLinks.map((link) => (
-                            <NavItem key={link.to} {...link} />
+                            <NavItem key={link.to} {...link} onClick={onClose} />
                         ))}
                     </div>
                 </div>
