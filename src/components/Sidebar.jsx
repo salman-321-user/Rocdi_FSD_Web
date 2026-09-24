@@ -63,9 +63,11 @@ export default function Sidebar({ onClose }) {
             {/* Logo + close button (mobile only) */}
             <div className="mb-8 flex items-center justify-between gap-3 px-2">
                 <div className="flex items-center gap-3">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-full border border-amber-500/40">
-                        <span className="h-3 w-3 rounded-full bg-amber-500" />
-                    </div>
+                    <img
+                        src="/logo.png"
+                        alt={t("sidebar.brand")}
+                        className="h-14 w-14 shrink-0 rounded-full object-contain"
+                    />
                     <div className="leading-tight">
                         <p className="text-lg font-semibold tracking-wide text-white">
                             {t("sidebar.brand")}

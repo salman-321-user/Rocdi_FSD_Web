@@ -1,7 +1,7 @@
 {
     "sidebar": {
-        "brand": "Diamdent",
-        "brandSub": "Alineurs",
+        "brand": "Smile Liners",
+        "brandSub": "Aligners",
         "dashboard": "Dashboard",
         "home": "Home",
         "realsmileAi": "RealSmile AI",
@@ -20,7 +20,7 @@
     "home": {
         "gettingStarted": {
             "title": "Getting started",
-            "subtitle": "Set up your RealSmile workspace",
+            "subtitle": "Set up your Smile Liners workspace",
             "dismiss": "Dismiss",
             "availabilityTitle": "My availability",
             "availabilityDescription": "Set your working days and hours, closure days, and consultation type (online, in-person, or both).",

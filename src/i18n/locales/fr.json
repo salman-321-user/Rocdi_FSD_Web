@@ -1,6 +1,6 @@
 {
   "sidebar": {
-    "brand": "Diamdent",
+    "brand": "Smile Liners",
     "brandSub": "Alineurs",
     "dashboard": "Tableau de bord",
     "home": "Accueil",
@@ -20,7 +20,7 @@
   "home": {
     "gettingStarted": {
       "title": "Premiers pas",
-      "subtitle": "Configurez votre espace RealSmile",
+      "subtitle": "Configurez votre espace Smile Liners",
       "dismiss": "Ignorer",
       "availabilityTitle": "Mes disponibilités",
       "availabilityDescription": "Définissez vos jours et horaires de travail, vos jours de fermeture et le type de consultation (en ligne, au cabinet, ou les deux).",
