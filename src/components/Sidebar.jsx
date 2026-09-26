@@ -61,21 +61,21 @@ export default function Sidebar({ onClose }) {
     return (
         <aside className="flex h-full w-full flex-col bg-[#161513] px-4 py-6 md:w-64">
             {/* Logo + close button (mobile only) */}
-            {/* Logo + close button (mobile only) */}
-            <div className="relative mb-8 flex items-center justify-center px-2">
+            <div className="mb-8 flex items-center justify-between gap-3 px-2">
                 <img
                     src="/logo.png"
                     alt="Logo"
-                    className="h-12 w-auto shrink-0 object-contain"
+                    className="h-16 w-auto shrink-0 object-contain"
                 />
 
-                {/* Close button – mobile only, absolute right */}
+                {/* Close button – mobile only */}
                 <button
+                    type="button"
                     onClick={onClose}
-                    className="absolute right-0 text-neutral-400 hover:text-white md:hidden"
+                    className="relative z-40 text-neutral-400 hover:text-white md:hidden"
                     aria-label="Close sidebar"
                 >
-                    <X size={20} />
+                    <X size={22} />
                 </button>
             </div>
 

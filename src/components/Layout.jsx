@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Search, ShoppingCart, Mail, Bell, Menu, X } from "lucide-react";
+import { Search, ShoppingCart, Mail, Bell, Menu } from "lucide-react";
 import Sidebar from "./Sidebar";
 
 const LANGUAGES = [
@@ -29,7 +29,7 @@ export default function Layout({ children }) {
                 className={`fixed inset-y-0 left-0 z-30 w-64 transform bg-white transition-transform duration-300 md:relative md:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
             >
-                <Sidebar />
+                <Sidebar onClose={() => setSidebarOpen(false)} />
             </div>
 
             <div className="flex flex-1 flex-col overflow-hidden">
@@ -39,8 +39,10 @@ export default function Layout({ children }) {
                     <div className="flex flex-1 items-center gap-2">
                         {/* Hamburger – mobile only */}
                         <button
+                            type="button"
                             className="text-neutral-600 hover:text-neutral-900 md:hidden"
                             onClick={() => setSidebarOpen(true)}
+                            aria-label="Open sidebar"
                         >
                             <Menu size={22} />
                         </button>
@@ -59,7 +61,10 @@ export default function Layout({ children }) {
                         </label>
 
                         {/* Search icon – mobile only */}
-                        <button className="text-neutral-500 hover:text-neutral-800 sm:hidden">
+                        <button
+                            type="button"
+                            className="text-neutral-500 hover:text-neutral-800 sm:hidden"
+                        >
                             <Search size={20} />
                         </button>
                     </div>
@@ -68,7 +73,10 @@ export default function Layout({ children }) {
                     <div className="flex items-center gap-2 sm:gap-4">
                         {/* Language switcher – compact on mobile */}
                         <div className="group relative">
-                            <button className="flex items-center gap-1 rounded-lg border border-neutral-200 px-2 py-1.5 text-sm text-neutral-700 hover:bg-neutral-50 sm:px-3">
+                            <button
+                                type="button"
+                                className="flex items-center gap-1 rounded-lg border border-neutral-200 px-2 py-1.5 text-sm text-neutral-700 hover:bg-neutral-50 sm:px-3"
+                            >
                                 <span>{current.flag}</span>
                                 <span className="hidden sm:inline">{current.label}</span>
                             </button>
@@ -76,6 +84,7 @@ export default function Layout({ children }) {
                                 {LANGUAGES.map((lang) => (
                                     <button
                                         key={lang.code}
+                                        type="button"
                                         onClick={() => i18n.changeLanguage(lang.code)}
                                         className={`flex w-full items-center gap-2 px-3 py-1.5 text-left text-sm hover:bg-neutral-50 ${lang.code === current.code
                                                 ? "font-medium text-amber-600"
@@ -88,17 +97,26 @@ export default function Layout({ children }) {
                             </div>
                         </div>
 
-                        {/* Cart – hidden on very small screens */}
-                        <button className="hidden text-neutral-500 hover:text-neutral-800 xs:block sm:block">
+                        {/* Cart – hidden on mobile */}
+                        <button
+                            type="button"
+                            className="hidden text-neutral-500 hover:text-neutral-800 sm:block"
+                        >
                             <ShoppingCart size={19} />
                         </button>
-                        {/* Mail – hidden on very small screens */}
-                        <button className="hidden text-neutral-500 hover:text-neutral-800 xs:block sm:block">
+                        {/* Mail – hidden on mobile */}
+                        <button
+                            type="button"
+                            className="hidden text-neutral-500 hover:text-neutral-800 sm:block"
+                        >
                             <Mail size={19} />
                         </button>
 
                         {/* Bell – always visible */}
-                        <button className="relative text-neutral-500 hover:text-neutral-800">
+                        <button
+                            type="button"
+                            className="relative text-neutral-500 hover:text-neutral-800"
+                        >
                             <Bell size={19} />
                             <span className="absolute -right-1 -top-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-amber-500 text-[9px] font-bold text-white">
                                 1
