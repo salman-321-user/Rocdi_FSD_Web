@@ -65,7 +65,7 @@ export default function Sidebar({ onClose }) {
                 <img
                     src="/logo.png"
                     alt="Logo"
-                    className="h-16 w-auto shrink-0 object-contain"
+                    className="h-12 w-auto shrink-0 object-contain"
                 />
 
                 {/* Close button – mobile only */}
