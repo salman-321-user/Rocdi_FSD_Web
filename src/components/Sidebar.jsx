@@ -16,7 +16,7 @@ function NavItem({ to, label, icon: Icon, onClick }) {
     return (
         <NavLink
             to={to}
-            end={to === "/"}
+            end
             onClick={onClick}
             className={({ isActive }) =>
                 [

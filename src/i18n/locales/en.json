@@ -58,5 +58,186 @@
             "total": "Total cases: {{count}}",
             "casesUnit": "{{count}} cases"
         }
+    },
+    "common": {
+        "back": "Back",
+        "next": "Continue",
+        "submit": "Submit case",
+        "saveDraft": "Save as draft",
+        "gender": {
+            "male": "Male",
+            "female": "Female"
+        },
+        "arches": {
+            "both": "Both arches",
+            "upper": "Upper arch",
+            "lower": "Lower arch"
+        },
+        "status": {
+            "draft": "Draft",
+            "new": "New",
+            "submitted": "Submitted",
+            "smilesetInProgress": "SmileSet In Progress",
+            "approvalRequired": "Approval Required",
+            "processing": "Processing",
+            "inTreatment": "In Treatment",
+            "completed": "Completed",
+            "ready": "Ready"
+        }
+    },
+    "pages": {
+        "realsmileAi": {
+            "title": "RealSmile AI",
+            "subtitle": "Upload a patient photo and preview their future smile in seconds.",
+            "uploadTitle": "Upload a smile photo",
+            "uploadHint": "Drag and drop or click to browse · JPG or PNG",
+            "patient": "Patient",
+            "patientPlaceholder": "Select a patient",
+            "treatment": "Treatment",
+            "treatments": {
+                "full": "Full smile",
+                "upper": "Upper only",
+                "lower": "Lower only"
+            },
+            "whitening": "Include whitening",
+            "generate": "Generate simulation",
+            "generating": "Generating…",
+            "preview": "Simulation preview",
+            "before": "Before",
+            "after": "After",
+            "emptyPreview": "Upload a photo to see the before/after preview.",
+            "tipsTitle": "Tips for best results",
+            "tip1": "Use a front-facing photo with a natural, wide smile.",
+            "tip2": "Make sure the lighting is even and the teeth are in focus.",
+            "tip3": "Avoid filters, heavy shadows or partially hidden teeth."
+        },
+        "aiCases": {
+            "title": "RealSmile AI Cases",
+            "subtitle": "All smile simulations generated for your patients.",
+            "newSimulation": "New simulation",
+            "all": "All",
+            "open": "Open"
+        },
+        "patients": {
+            "title": "Patients",
+            "total": "{{count}} patients in your practice",
+            "addPatient": "Add patient",
+            "searchPlaceholder": "Search patients by name",
+            "empty": "No patients match your search.",
+            "columns": {
+                "name": "Patient",
+                "age": "Age",
+                "contact": "Contact",
+                "cases": "Cases",
+                "lastVisit": "Last visit",
+                "status": "Status"
+            }
+        },
+        "addCase": {
+            "title": "Add a case",
+            "subtitle": "Submit a new clear aligner case in a few steps.",
+            "steps": {
+                "patient": "Patient details",
+                "clinical": "Clinical info",
+                "files": "Photos & scans",
+                "review": "Review"
+            },
+            "fields": {
+                "firstName": "First name",
+                "lastName": "Last name",
+                "dob": "Date of birth",
+                "gender": "Gender",
+                "email": "Email",
+                "phone": "Phone",
+                "chiefComplaint": "Chief complaint",
+                "chiefComplaintPlaceholder": "e.g. Crowding on the lower front teeth",
+                "archesToTreat": "Arches to treat",
+                "crowding": "Crowding",
+                "spacing": "Spacing",
+                "notes": "Notes for the lab",
+                "notesPlaceholder": "Any specific instructions or treatment goals…"
+            },
+            "levels": {
+                "none": "None",
+                "mild": "Mild",
+                "moderate": "Moderate",
+                "severe": "Severe"
+            },
+            "files": {
+                "photos": "Intraoral photos",
+                "scans": "3D scans (STL)",
+                "xray": "Panoramic X-ray",
+                "dropHint": "Click or drop files"
+            },
+            "reviewText": "By submitting, you confirm the information above is accurate. Our lab will prepare the SmileSet design within 3–5 business days.",
+            "successTitle": "Case submitted!",
+            "successText": "We will notify you as soon as the SmileSet design is ready for review.",
+            "another": "Add another case"
+        },
+        "addRetainer": {
+            "title": "Add a retainer",
+            "subtitle": "Order retainers to keep your patients' results in place.",
+            "patient": "Patient",
+            "arch": "Arch",
+            "type": "Retainer type",
+            "quantity": "Quantity",
+            "types": {
+                "essix": "Essix",
+                "hawley": "Hawley",
+                "fixed": "Fixed"
+            },
+            "typeDescriptions": {
+                "essix": "Clear, removable",
+                "hawley": "Wire & acrylic",
+                "fixed": "Bonded lingual wire"
+            },
+            "scanSource": "Scan",
+            "scanSources": {
+                "previous": "Use last scan",
+                "new": "Upload new"
+            },
+            "notes": "Notes",
+            "notesPlaceholder": "Optional instructions for the lab…",
+            "summary": "Order summary",
+            "delivery": "Estimated delivery: 5–7 business days",
+            "placeOrder": "Place order",
+            "ordered": "Order placed"
+        },
+        "allCases": {
+            "title": "All cases",
+            "subtitle": "Track every case from submission to completion.",
+            "newCase": "New case",
+            "all": "All",
+            "columns": {
+                "id": "Case",
+                "patient": "Patient",
+                "type": "Type",
+                "status": "Status",
+                "progress": "Progress",
+                "updated": "Updated"
+            },
+            "types": {
+                "aligners": "Aligners",
+                "retainer": "Retainer"
+            },
+            "alignerStep": "Step {{current}} / {{total}}",
+            "empty": "No cases in this category."
+        },
+        "incomplete": {
+            "title": "Incomplete submissions",
+            "subtitle": "Finish these drafts to send them to the lab.",
+            "lastEdited": "Last edited {{date}}",
+            "completion": "{{percent}}% complete",
+            "missing": "Missing",
+            "missingItems": {
+                "photos": "Photos",
+                "scans": "3D scans",
+                "prescription": "Prescription",
+                "xray": "X-ray"
+            },
+            "resume": "Resume",
+            "discard": "Discard draft",
+            "emptyTitle": "All caught up — no incomplete submissions."
+        }
     }
 }

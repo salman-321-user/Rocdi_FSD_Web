@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
     Calendar,
@@ -31,6 +32,7 @@ const caseData = [
 
 export default function Home() {
     const { t } = useTranslation();
+    const navigate = useNavigate();
     const [showOnboarding, setShowOnboarding] = useState(true);
 
     const onboardingSteps = [
@@ -149,7 +151,7 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
-                <button className="w-full rounded-lg bg-white px-4 py-2 text-sm font-medium text-navy-800 hover:bg-brand-50 sm:w-auto">
+                <button onClick={() => navigate("/realsmile-ai")} className="w-full rounded-lg bg-white px-4 py-2 text-sm font-medium text-navy-800 hover:bg-brand-50 sm:w-auto">
                     {t("home.featureBanner.cta")}
                 </button>
             </section>
@@ -186,7 +188,7 @@ export default function Home() {
                     <p className="mt-2 max-w-md text-sm text-neutral-500">
                         {t("home.welcome.subtitle")}
                     </p>
-                    <button className="mt-4 w-full rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-brand-700 sm:w-auto">
+                    <button onClick={() => navigate("/cases/add")} className="mt-4 w-full rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-brand-700 sm:w-auto">
                         + {t("home.welcome.cta")}
                     </button>
                 </div>
@@ -210,7 +212,7 @@ export default function Home() {
                     {t("home.recentCases.empty")}
                 </div>
                 <div className="mt-2 text-center">
-                    <button className="text-sm font-medium text-brand-600 hover:text-brand-700">
+                    <button onClick={() => navigate("/cases")} className="text-sm font-medium text-brand-600 hover:text-brand-700">
                         {t("home.recentCases.viewAll")}
                     </button>
                 </div>

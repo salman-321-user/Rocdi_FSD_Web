@@ -37,6 +37,7 @@ module.exports = {
         },
         // accent: tooth outline blue
         accent: {
+          50: "#E6F1FC",
           400: "#00CBFD",
           500: "#02A1E5",
           600: "#046AD9",

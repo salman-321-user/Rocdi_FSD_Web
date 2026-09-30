@@ -58,5 +58,186 @@
       "total": "Total des dossiers : {{count}}",
       "casesUnit": "{{count}} dossiers"
     }
+  },
+  "common": {
+    "back": "Retour",
+    "next": "Continuer",
+    "submit": "Soumettre le dossier",
+    "saveDraft": "Enregistrer le brouillon",
+    "gender": {
+      "male": "Homme",
+      "female": "Femme"
+    },
+    "arches": {
+      "both": "Deux arcades",
+      "upper": "Arcade supérieure",
+      "lower": "Arcade inférieure"
+    },
+    "status": {
+      "draft": "Brouillon",
+      "new": "Nouveau",
+      "submitted": "Soumis",
+      "smilesetInProgress": "SmileSet en cours",
+      "approvalRequired": "Approbation requise",
+      "processing": "En cours",
+      "inTreatment": "En traitement",
+      "completed": "Terminé",
+      "ready": "Prêt"
+    }
+  },
+  "pages": {
+    "realsmileAi": {
+      "title": "RealSmile IA",
+      "subtitle": "Téléversez une photo du patient et prévisualisez son futur sourire en quelques secondes.",
+      "uploadTitle": "Téléverser une photo du sourire",
+      "uploadHint": "Glissez-déposez ou cliquez pour parcourir · JPG ou PNG",
+      "patient": "Patient",
+      "patientPlaceholder": "Sélectionner un patient",
+      "treatment": "Traitement",
+      "treatments": {
+        "full": "Sourire complet",
+        "upper": "Haut uniquement",
+        "lower": "Bas uniquement"
+      },
+      "whitening": "Inclure le blanchiment",
+      "generate": "Générer la simulation",
+      "generating": "Génération…",
+      "preview": "Aperçu de la simulation",
+      "before": "Avant",
+      "after": "Après",
+      "emptyPreview": "Téléversez une photo pour voir l'aperçu avant/après.",
+      "tipsTitle": "Conseils pour de meilleurs résultats",
+      "tip1": "Utilisez une photo de face avec un sourire naturel et large.",
+      "tip2": "Assurez-vous que l'éclairage est uniforme et que les dents sont nettes.",
+      "tip3": "Évitez les filtres, les ombres marquées ou les dents partiellement cachées."
+    },
+    "aiCases": {
+      "title": "Dossiers RealSmile IA",
+      "subtitle": "Toutes les simulations de sourire générées pour vos patients.",
+      "newSimulation": "Nouvelle simulation",
+      "all": "Tous",
+      "open": "Ouvrir"
+    },
+    "patients": {
+      "title": "Patients",
+      "total": "{{count}} patients dans votre cabinet",
+      "addPatient": "Ajouter un patient",
+      "searchPlaceholder": "Rechercher un patient par nom",
+      "empty": "Aucun patient ne correspond à votre recherche.",
+      "columns": {
+        "name": "Patient",
+        "age": "Âge",
+        "contact": "Contact",
+        "cases": "Dossiers",
+        "lastVisit": "Dernière visite",
+        "status": "Statut"
+      }
+    },
+    "addCase": {
+      "title": "Ajouter un dossier",
+      "subtitle": "Soumettez un nouveau dossier d'aligneurs en quelques étapes.",
+      "steps": {
+        "patient": "Infos patient",
+        "clinical": "Infos cliniques",
+        "files": "Photos et scans",
+        "review": "Vérification"
+      },
+      "fields": {
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "dob": "Date de naissance",
+        "gender": "Sexe",
+        "email": "E-mail",
+        "phone": "Téléphone",
+        "chiefComplaint": "Motif de consultation",
+        "chiefComplaintPlaceholder": "ex. Encombrement des incisives inférieures",
+        "archesToTreat": "Arcades à traiter",
+        "crowding": "Encombrement",
+        "spacing": "Espacement",
+        "notes": "Notes pour le laboratoire",
+        "notesPlaceholder": "Instructions particulières ou objectifs de traitement…"
+      },
+      "levels": {
+        "none": "Aucun",
+        "mild": "Léger",
+        "moderate": "Modéré",
+        "severe": "Sévère"
+      },
+      "files": {
+        "photos": "Photos intra-orales",
+        "scans": "Scans 3D (STL)",
+        "xray": "Radio panoramique",
+        "dropHint": "Cliquez ou déposez des fichiers"
+      },
+      "reviewText": "En soumettant, vous confirmez que les informations ci-dessus sont exactes. Notre laboratoire préparera le SmileSet sous 3 à 5 jours ouvrés.",
+      "successTitle": "Dossier soumis !",
+      "successText": "Nous vous préviendrons dès que le SmileSet sera prêt à être vérifié.",
+      "another": "Ajouter un autre dossier"
+    },
+    "addRetainer": {
+      "title": "Ajouter une contention",
+      "subtitle": "Commandez des contentions pour maintenir les résultats de vos patients.",
+      "patient": "Patient",
+      "arch": "Arcade",
+      "type": "Type de contention",
+      "quantity": "Quantité",
+      "types": {
+        "essix": "Essix",
+        "hawley": "Hawley",
+        "fixed": "Fixe"
+      },
+      "typeDescriptions": {
+        "essix": "Transparente, amovible",
+        "hawley": "Fil et résine",
+        "fixed": "Fil lingual collé"
+      },
+      "scanSource": "Scan",
+      "scanSources": {
+        "previous": "Dernier scan",
+        "new": "Nouveau scan"
+      },
+      "notes": "Notes",
+      "notesPlaceholder": "Instructions facultatives pour le laboratoire…",
+      "summary": "Récapitulatif",
+      "delivery": "Livraison estimée : 5 à 7 jours ouvrés",
+      "placeOrder": "Passer la commande",
+      "ordered": "Commande passée"
+    },
+    "allCases": {
+      "title": "Tous les dossiers",
+      "subtitle": "Suivez chaque dossier de la soumission à la fin du traitement.",
+      "newCase": "Nouveau dossier",
+      "all": "Tous",
+      "columns": {
+        "id": "Dossier",
+        "patient": "Patient",
+        "type": "Type",
+        "status": "Statut",
+        "progress": "Progression",
+        "updated": "Mis à jour"
+      },
+      "types": {
+        "aligners": "Aligneurs",
+        "retainer": "Contention"
+      },
+      "alignerStep": "Étape {{current}} / {{total}}",
+      "empty": "Aucun dossier dans cette catégorie."
+    },
+    "incomplete": {
+      "title": "Soumissions incomplètes",
+      "subtitle": "Terminez ces brouillons pour les envoyer au laboratoire.",
+      "lastEdited": "Modifié le {{date}}",
+      "completion": "{{percent}} % complété",
+      "missing": "Manquant",
+      "missingItems": {
+        "photos": "Photos",
+        "scans": "Scans 3D",
+        "prescription": "Prescription",
+        "xray": "Radio"
+      },
+      "resume": "Reprendre",
+      "discard": "Supprimer le brouillon",
+      "emptyTitle": "Tout est à jour — aucune soumission incomplète."
+    }
   }
 }
