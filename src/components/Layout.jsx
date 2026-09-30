@@ -15,7 +15,7 @@ export default function Layout({ children }) {
         LANGUAGES.find((l) => l.code === i18n.language) ?? LANGUAGES[0];
 
     return (
-        <div className="flex h-screen bg-[#F7F5F1]">
+        <div className="flex h-screen bg-[#F3F7FB]">
             {/* Mobile sidebar overlay */}
             {sidebarOpen && (
                 <div
@@ -55,7 +55,7 @@ export default function Layout({ children }) {
                                 placeholder={t("navbar.searchPlaceholder")}
                                 className="w-full bg-transparent outline-none placeholder:text-neutral-400"
                             />
-                            <kbd className="rounded-md bg-amber-500/90 px-2 py-0.5 text-[11px] font-semibold text-white">
+                            <kbd className="rounded-md bg-brand-500 px-2 py-0.5 text-[11px] font-semibold text-white">
                                 ⌘K
                             </kbd>
                         </label>
@@ -87,7 +87,7 @@ export default function Layout({ children }) {
                                         type="button"
                                         onClick={() => i18n.changeLanguage(lang.code)}
                                         className={`flex w-full items-center gap-2 px-3 py-1.5 text-left text-sm hover:bg-neutral-50 ${lang.code === current.code
-                                                ? "font-medium text-amber-600"
+                                                ? "font-medium text-brand-600"
                                                 : "text-neutral-700"
                                             }`}
                                     >
@@ -118,7 +118,7 @@ export default function Layout({ children }) {
                             className="relative text-neutral-500 hover:text-neutral-800"
                         >
                             <Bell size={19} />
-                            <span className="absolute -right-1 -top-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-amber-500 text-[9px] font-bold text-white">
+                            <span className="absolute -right-1 -top-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-brand-500 text-[9px] font-bold text-white">
                                 1
                             </span>
                         </button>

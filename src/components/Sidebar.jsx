@@ -22,8 +22,8 @@ function NavItem({ to, label, icon: Icon, onClick }) {
                 [
                     "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors",
                     isActive
-                        ? "bg-white/10 text-white font-medium"
-                        : "text-neutral-400 hover:bg-white/5 hover:text-neutral-200",
+                        ? "bg-brand-50 text-navy-900 font-medium"
+                        : "text-navy-700/80 hover:bg-navy-50 hover:text-navy-900",
                 ].join(" ")
             }
         >
@@ -59,20 +59,20 @@ export default function Sidebar({ onClose }) {
     ];
 
     return (
-        <aside className="flex h-full w-full flex-col bg-[#161513] px-4 py-6 md:w-64">
+        <aside className="flex h-full w-full flex-col border-r border-neutral-200 bg-white px-4 py-6 md:w-64">
             {/* Logo + close button (mobile only) */}
             <div className="mb-8 flex items-center justify-between gap-3 px-2">
                 <img
                     src="/logo.png"
-                    alt="Logo"
-                    className="h-12 w-auto shrink-0 object-contain"
+                    alt="Smile Liners"
+                    className="h-14 w-auto shrink-0 object-contain"
                 />
 
                 {/* Close button – mobile only */}
                 <button
                     type="button"
                     onClick={onClose}
-                    className="relative z-40 text-neutral-400 hover:text-white md:hidden"
+                    className="relative z-40 text-neutral-400 hover:text-navy-900 md:hidden"
                     aria-label="Close sidebar"
                 >
                     <X size={22} />
@@ -81,7 +81,7 @@ export default function Sidebar({ onClose }) {
 
             <nav className="flex-1 space-y-6 overflow-y-auto">
                 <div>
-                    <p className="mb-2 px-3 text-[11px] font-medium uppercase tracking-widest text-neutral-600">
+                    <p className="mb-2 px-3 text-[11px] font-medium uppercase tracking-widest text-neutral-400">
                         {t("sidebar.dashboard")}
                     </p>
                     <div className="space-y-1">
@@ -92,7 +92,7 @@ export default function Sidebar({ onClose }) {
                 </div>
 
                 <div>
-                    <p className="mb-2 px-3 text-[11px] font-medium uppercase tracking-widest text-neutral-600">
+                    <p className="mb-2 px-3 text-[11px] font-medium uppercase tracking-widest text-neutral-400">
                         {t("sidebar.casesHub")}
                     </p>
                     <div className="space-y-1">
